@@ -7,80 +7,333 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		715F88692B81AAA100155411 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715F88682B81AAA100155411 /* main.cpp */; };
+		7105B04F2B82CC2F00E9FB9A /* freenect2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71ABB24D2B81D4C40061CD1F /* freenect2.framework */; };
+		7105B0502B82CC2F00E9FB9A /* freenect2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71ABB24D2B81D4C40061CD1F /* freenect2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		711867E02B82E96300DB3162 /* KV2VirtualCamLibKinect.mm in Sources */ = {isa = PBXBuildFile; fileRef = 711867DF2B82E96300DB3162 /* KV2VirtualCamLibKinect.mm */; };
+		7118680B2B8305E000DB3162 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7118680A2B8305E000DB3162 /* Assets.xcassets */; };
+		7118680E2B8305E000DB3162 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7118680C2B8305E000DB3162 /* Main.storyboard */; };
+		711868172B83061200DB3162 /* KV2VirtualCamDeviceSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7123C4562B82BB2F00AD2BC6 /* KV2VirtualCamDeviceSource.mm */; };
+		711868182B83061200DB3162 /* KV2VirtualCamProviderSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7123C4542B82BB2F00AD2BC6 /* KV2VirtualCamProviderSource.mm */; };
+		711868192B83061200DB3162 /* KV2VirtualCamStreamSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7123C4582B82BB2F00AD2BC6 /* KV2VirtualCamStreamSource.mm */; };
+		7118681A2B83061200DB3162 /* KV2VirtualCamLibKinect.mm in Sources */ = {isa = PBXBuildFile; fileRef = 711867DF2B82E96300DB3162 /* KV2VirtualCamLibKinect.mm */; };
+		7118681B2B83061200DB3162 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7123C44F2B82BAF300AD2BC6 /* main.mm */; };
+		7118681C2B83061900DB3162 /* freenect2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71ABB24D2B81D4C40061CD1F /* freenect2.framework */; };
+		7118681D2B83062600DB3162 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71ABB2AE2B81E3D00061CD1F /* CoreVideo.framework */; };
+		7118681E2B83062C00DB3162 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71ABB2AC2B81E3C20061CD1F /* CoreMedia.framework */; };
+		7118681F2B83062C00DB3162 /* CoreMediaIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 715F88702B81AAB900155411 /* CoreMediaIO.framework */; };
+		7123C42D2B82BA0F00AD2BC6 /* KinectV2CamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7123C42C2B82BA0F00AD2BC6 /* KinectV2CamApp.swift */; };
+		7123C42F2B82BA0F00AD2BC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7123C42E2B82BA0F00AD2BC6 /* ContentView.swift */; };
+		7123C4312B82BA1000AD2BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7123C4302B82BA1000AD2BC6 /* Assets.xcassets */; };
+		7123C4342B82BA1000AD2BC6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7123C4332B82BA1000AD2BC6 /* Preview Assets.xcassets */; };
+		7123C43A2B82BA5700AD2BC6 /* KinectV2SystemExtensionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7123C4392B82BA5700AD2BC6 /* KinectV2SystemExtensionRequest.swift */; };
+		7123C44A2B82BAC600AD2BC6 /* br.com.andersonramos.KinectV2Cam.KV2VirtualCam.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 7123C43F2B82BAC600AD2BC6 /* br.com.andersonramos.KinectV2Cam.KV2VirtualCam.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7123C4512B82BAF300AD2BC6 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7123C44F2B82BAF300AD2BC6 /* main.mm */; };
+		7123C45B2B82BB2F00AD2BC6 /* KV2VirtualCamProviderSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7123C4542B82BB2F00AD2BC6 /* KV2VirtualCamProviderSource.mm */; };
+		7123C45C2B82BB2F00AD2BC6 /* KV2VirtualCamDeviceSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7123C4562B82BB2F00AD2BC6 /* KV2VirtualCamDeviceSource.mm */; };
+		7123C45D2B82BB2F00AD2BC6 /* KV2VirtualCamStreamSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7123C4582B82BB2F00AD2BC6 /* KV2VirtualCamStreamSource.mm */; };
+		7123C4612B82BBDF00AD2BC6 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71ABB2AC2B81E3C20061CD1F /* CoreMedia.framework */; };
+		7123C4622B82BBE700AD2BC6 /* CoreMediaIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 715F88702B81AAB900155411 /* CoreMediaIO.framework */; };
+		7123C4632B82BBF600AD2BC6 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71ABB2AE2B81E3D00061CD1F /* CoreVideo.framework */; };
+		7198DC322B831311007C4B62 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7198DC2C2B831311007C4B62 /* AppKit.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		711868152B83060700DB3162 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71ABB2412B81D4C40061CD1F /* libfreenect2.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 21660968B3C74A4998023DD0;
+			remoteInfo = freenect2;
+		};
+		7123C4482B82BAC600AD2BC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 715F885D2B81AAA100155411 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7123C43E2B82BAC600AD2BC6;
+			remoteInfo = KV2VirtualCam;
+		};
+		71ABB24A2B81D4C40061CD1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71ABB2412B81D4C40061CD1F /* libfreenect2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 95BE81B076D948448E8502D9;
+			remoteInfo = Protonect;
+		};
+		71ABB24C2B81D4C40061CD1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71ABB2412B81D4C40061CD1F /* libfreenect2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8173B28CE8C34CA3B15A6F7D;
+			remoteInfo = freenect2;
+		};
+		71ABB24E2B81D4C40061CD1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71ABB2412B81D4C40061CD1F /* libfreenect2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C9E049C21E8C4D3ABE8DE213;
+			remoteInfo = generate_resources_tool;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		715F88632B81AAA100155411 /* CopyFiles */ = {
+		7105B0512B82CC2F00E9FB9A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			dstPath = "";
+			dstSubfolderSpec = 10;
 			files = (
+				7105B0502B82CC2F00E9FB9A /* freenect2.framework in Embed Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7123C44E2B82BAC600AD2BC6 /* Embed System Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				7123C44A2B82BAC600AD2BC6 /* br.com.andersonramos.KinectV2Cam.KV2VirtualCam.systemextension in Embed System Extensions */,
+			);
+			name = "Embed System Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		715F88652B81AAA100155411 /* KinectV2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KinectV2; sourceTree = BUILT_PRODUCTS_DIR; };
-		715F88682B81AAA100155411 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		711867DE2B82E96300DB3162 /* KV2VirtualCamLibKinect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KV2VirtualCamLibKinect.h; sourceTree = "<group>"; };
+		711867DF2B82E96300DB3162 /* KV2VirtualCamLibKinect.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = KV2VirtualCamLibKinect.mm; sourceTree = "<group>"; };
+		711868022B8305DF00DB3162 /* KV2VirtualCamTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KV2VirtualCamTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7118680A2B8305E000DB3162 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7118680D2B8305E000DB3162 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		711868112B8305E000DB3162 /* KV2VirtualCamTestApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KV2VirtualCamTestApp.entitlements; sourceTree = "<group>"; };
+		711868202B83064B00DB3162 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7123C42A2B82BA0F00AD2BC6 /* KinectV2Cam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KinectV2Cam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7123C42C2B82BA0F00AD2BC6 /* KinectV2CamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinectV2CamApp.swift; sourceTree = "<group>"; };
+		7123C42E2B82BA0F00AD2BC6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7123C4302B82BA1000AD2BC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7123C4332B82BA1000AD2BC6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7123C4352B82BA1000AD2BC6 /* KinectV2Cam.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KinectV2Cam.entitlements; sourceTree = "<group>"; };
+		7123C4392B82BA5700AD2BC6 /* KinectV2SystemExtensionRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KinectV2SystemExtensionRequest.swift; sourceTree = "<group>"; };
+		7123C43F2B82BAC600AD2BC6 /* br.com.andersonramos.KinectV2Cam.KV2VirtualCam.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = br.com.andersonramos.KinectV2Cam.KV2VirtualCam.systemextension; sourceTree = BUILT_PRODUCTS_DIR; };
+		7123C4462B82BAC600AD2BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7123C4472B82BAC600AD2BC6 /* KV2VirtualCam.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KV2VirtualCam.entitlements; sourceTree = "<group>"; };
+		7123C44F2B82BAF300AD2BC6 /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		7123C4542B82BB2F00AD2BC6 /* KV2VirtualCamProviderSource.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KV2VirtualCamProviderSource.mm; sourceTree = "<group>"; };
+		7123C4552B82BB2F00AD2BC6 /* KV2VirtualCamConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KV2VirtualCamConstants.h; sourceTree = "<group>"; };
+		7123C4562B82BB2F00AD2BC6 /* KV2VirtualCamDeviceSource.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KV2VirtualCamDeviceSource.mm; sourceTree = "<group>"; };
+		7123C4572B82BB2F00AD2BC6 /* KV2VirtualCamDeviceSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KV2VirtualCamDeviceSource.h; sourceTree = "<group>"; };
+		7123C4582B82BB2F00AD2BC6 /* KV2VirtualCamStreamSource.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KV2VirtualCamStreamSource.mm; sourceTree = "<group>"; };
+		7123C4592B82BB2F00AD2BC6 /* KV2VirtualCamStreamSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KV2VirtualCamStreamSource.h; sourceTree = "<group>"; };
+		7123C45A2B82BB2F00AD2BC6 /* KV2VirtualCamProviderSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KV2VirtualCamProviderSource.h; sourceTree = "<group>"; };
+		7123C4962B82C6F800AD2BC6 /* KV2VirtualCamLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KV2VirtualCamLogging.h; sourceTree = "<group>"; };
+		715F88702B81AAB900155411 /* CoreMediaIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMediaIO.framework; path = System/Library/Frameworks/CoreMediaIO.framework; sourceTree = SDKROOT; };
+		71676F252B81B8D600D6293F /* ExtensionFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExtensionFoundation.framework; path = System/Library/Frameworks/ExtensionFoundation.framework; sourceTree = SDKROOT; };
+		71676F272B81B8E900D6293F /* SystemExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemExtensions.framework; path = System/Library/Frameworks/SystemExtensions.framework; sourceTree = SDKROOT; };
+		7198DC2C2B831311007C4B62 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		71ABB2412B81D4C40061CD1F /* libfreenect2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libfreenect2.xcodeproj; path = libfreenect2/libfreenect2.xcodeproj; sourceTree = "<group>"; };
+		71ABB2A62B81DD560061CD1F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		71ABB2AC2B81E3C20061CD1F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		71ABB2AE2B81E3D00061CD1F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		715F88622B81AAA100155411 /* Frameworks */ = {
+		711867FF2B8305DF00DB3162 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7198DC322B831311007C4B62 /* AppKit.framework in Frameworks */,
+				7118681E2B83062C00DB3162 /* CoreMedia.framework in Frameworks */,
+				7118681F2B83062C00DB3162 /* CoreMediaIO.framework in Frameworks */,
+				7118681D2B83062600DB3162 /* CoreVideo.framework in Frameworks */,
+				7118681C2B83061900DB3162 /* freenect2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7123C4272B82BA0F00AD2BC6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7123C43C2B82BAC600AD2BC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7123C4632B82BBF600AD2BC6 /* CoreVideo.framework in Frameworks */,
+				7105B04F2B82CC2F00E9FB9A /* freenect2.framework in Frameworks */,
+				7123C4622B82BBE700AD2BC6 /* CoreMediaIO.framework in Frameworks */,
+				7123C4612B82BBDF00AD2BC6 /* CoreMedia.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		711868032B8305DF00DB3162 /* KV2VirtualCamTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				711868202B83064B00DB3162 /* Info.plist */,
+				7118680A2B8305E000DB3162 /* Assets.xcassets */,
+				7118680C2B8305E000DB3162 /* Main.storyboard */,
+				711868112B8305E000DB3162 /* KV2VirtualCamTestApp.entitlements */,
+			);
+			path = KV2VirtualCamTestApp;
+			sourceTree = "<group>";
+		};
+		7123C42B2B82BA0F00AD2BC6 /* KinectV2Cam */ = {
+			isa = PBXGroup;
+			children = (
+				7123C4392B82BA5700AD2BC6 /* KinectV2SystemExtensionRequest.swift */,
+				7123C42C2B82BA0F00AD2BC6 /* KinectV2CamApp.swift */,
+				7123C42E2B82BA0F00AD2BC6 /* ContentView.swift */,
+				7123C4302B82BA1000AD2BC6 /* Assets.xcassets */,
+				7123C4352B82BA1000AD2BC6 /* KinectV2Cam.entitlements */,
+				7123C4322B82BA1000AD2BC6 /* Preview Content */,
+			);
+			path = KinectV2Cam;
+			sourceTree = "<group>";
+		};
+		7123C4322B82BA1000AD2BC6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7123C4332B82BA1000AD2BC6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7123C4402B82BAC600AD2BC6 /* KV2VirtualCam */ = {
+			isa = PBXGroup;
+			children = (
+				7123C4532B82BB1100AD2BC6 /* Source */,
+				7123C44F2B82BAF300AD2BC6 /* main.mm */,
+				7123C4462B82BAC600AD2BC6 /* Info.plist */,
+				7123C4472B82BAC600AD2BC6 /* KV2VirtualCam.entitlements */,
+			);
+			path = KV2VirtualCam;
+			sourceTree = "<group>";
+		};
+		7123C4532B82BB1100AD2BC6 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				7123C4962B82C6F800AD2BC6 /* KV2VirtualCamLogging.h */,
+				7123C4552B82BB2F00AD2BC6 /* KV2VirtualCamConstants.h */,
+				7123C4572B82BB2F00AD2BC6 /* KV2VirtualCamDeviceSource.h */,
+				7123C4562B82BB2F00AD2BC6 /* KV2VirtualCamDeviceSource.mm */,
+				7123C45A2B82BB2F00AD2BC6 /* KV2VirtualCamProviderSource.h */,
+				7123C4542B82BB2F00AD2BC6 /* KV2VirtualCamProviderSource.mm */,
+				7123C4592B82BB2F00AD2BC6 /* KV2VirtualCamStreamSource.h */,
+				7123C4582B82BB2F00AD2BC6 /* KV2VirtualCamStreamSource.mm */,
+				711867DE2B82E96300DB3162 /* KV2VirtualCamLibKinect.h */,
+				711867DF2B82E96300DB3162 /* KV2VirtualCamLibKinect.mm */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		715F885C2B81AAA100155411 = {
 			isa = PBXGroup;
 			children = (
-				715F88672B81AAA100155411 /* KinectV2 */,
+				71ABB2412B81D4C40061CD1F /* libfreenect2.xcodeproj */,
+				7123C42B2B82BA0F00AD2BC6 /* KinectV2Cam */,
+				7123C4402B82BAC600AD2BC6 /* KV2VirtualCam */,
+				711868032B8305DF00DB3162 /* KV2VirtualCamTestApp */,
 				715F88662B81AAA100155411 /* Products */,
+				715F886F2B81AAB900155411 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		715F88662B81AAA100155411 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				715F88652B81AAA100155411 /* KinectV2 */,
+				7123C42A2B82BA0F00AD2BC6 /* KinectV2Cam.app */,
+				7123C43F2B82BAC600AD2BC6 /* br.com.andersonramos.KinectV2Cam.KV2VirtualCam.systemextension */,
+				711868022B8305DF00DB3162 /* KV2VirtualCamTestApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		715F88672B81AAA100155411 /* KinectV2 */ = {
+		715F886F2B81AAB900155411 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				715F88682B81AAA100155411 /* main.cpp */,
+				7198DC2C2B831311007C4B62 /* AppKit.framework */,
+				71ABB2AE2B81E3D00061CD1F /* CoreVideo.framework */,
+				71ABB2AC2B81E3C20061CD1F /* CoreMedia.framework */,
+				71ABB2A62B81DD560061CD1F /* libc++.tbd */,
+				71676F272B81B8E900D6293F /* SystemExtensions.framework */,
+				71676F252B81B8D600D6293F /* ExtensionFoundation.framework */,
+				715F88702B81AAB900155411 /* CoreMediaIO.framework */,
 			);
-			path = KinectV2;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		71ABB2422B81D4C40061CD1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				71ABB24B2B81D4C40061CD1F /* Protonect */,
+				71ABB24D2B81D4C40061CD1F /* freenect2.framework */,
+				71ABB24F2B81D4C40061CD1F /* generate_resources_tool */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		715F88642B81AAA100155411 /* KinectV2 */ = {
+		711868012B8305DF00DB3162 /* KV2VirtualCamTestApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 715F886C2B81AAA100155411 /* Build configuration list for PBXNativeTarget "KinectV2" */;
+			buildConfigurationList = 711868122B8305E000DB3162 /* Build configuration list for PBXNativeTarget "KV2VirtualCamTestApp" */;
 			buildPhases = (
-				715F88612B81AAA100155411 /* Sources */,
-				715F88622B81AAA100155411 /* Frameworks */,
-				715F88632B81AAA100155411 /* CopyFiles */,
+				711867FE2B8305DF00DB3162 /* Sources */,
+				711867FF2B8305DF00DB3162 /* Frameworks */,
+				711868002B8305DF00DB3162 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				711868162B83060700DB3162 /* PBXTargetDependency */,
+			);
+			name = KV2VirtualCamTestApp;
+			productName = KV2VirtualCamTestApp;
+			productReference = 711868022B8305DF00DB3162 /* KV2VirtualCamTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7123C4292B82BA0F00AD2BC6 /* KinectV2Cam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7123C4362B82BA1000AD2BC6 /* Build configuration list for PBXNativeTarget "KinectV2Cam" */;
+			buildPhases = (
+				7123C4262B82BA0F00AD2BC6 /* Sources */,
+				7123C4272B82BA0F00AD2BC6 /* Frameworks */,
+				7123C4282B82BA0F00AD2BC6 /* Resources */,
+				7123C44E2B82BAC600AD2BC6 /* Embed System Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7123C4492B82BAC600AD2BC6 /* PBXTargetDependency */,
+			);
+			name = KinectV2Cam;
+			productName = KinectV2Cam;
+			productReference = 7123C42A2B82BA0F00AD2BC6 /* KinectV2Cam.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7123C43E2B82BAC600AD2BC6 /* KV2VirtualCam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7123C44B2B82BAC600AD2BC6 /* Build configuration list for PBXNativeTarget "KV2VirtualCam" */;
+			buildPhases = (
+				7123C43B2B82BAC600AD2BC6 /* Sources */,
+				7123C43C2B82BAC600AD2BC6 /* Frameworks */,
+				7123C43D2B82BAC600AD2BC6 /* Resources */,
+				7105B0512B82CC2F00E9FB9A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = KinectV2;
-			productName = KinectV2;
-			productReference = 715F88652B81AAA100155411 /* KinectV2 */;
-			productType = "com.apple.product-type.tool";
+			name = KV2VirtualCam;
+			productName = KV2VirtualCam;
+			productReference = 7123C43F2B82BAC600AD2BC6 /* br.com.andersonramos.KinectV2Cam.KV2VirtualCam.systemextension */;
+			productType = "com.apple.product-type.system-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -89,9 +342,16 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
-					715F88642B81AAA100155411 = {
+					711868012B8305DF00DB3162 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					7123C4292B82BA0F00AD2BC6 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					7123C43E2B82BAC600AD2BC6 = {
 						CreatedOnToolsVersion = 15.2;
 					};
 				};
@@ -107,25 +367,324 @@
 			mainGroup = 715F885C2B81AAA100155411;
 			productRefGroup = 715F88662B81AAA100155411 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 71ABB2422B81D4C40061CD1F /* Products */;
+					ProjectRef = 71ABB2412B81D4C40061CD1F /* libfreenect2.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
-				715F88642B81AAA100155411 /* KinectV2 */,
+				7123C4292B82BA0F00AD2BC6 /* KinectV2Cam */,
+				7123C43E2B82BAC600AD2BC6 /* KV2VirtualCam */,
+				711868012B8305DF00DB3162 /* KV2VirtualCamTestApp */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		71ABB24B2B81D4C40061CD1F /* Protonect */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = Protonect;
+			remoteRef = 71ABB24A2B81D4C40061CD1F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		71ABB24D2B81D4C40061CD1F /* freenect2.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = freenect2.framework;
+			remoteRef = 71ABB24C2B81D4C40061CD1F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		71ABB24F2B81D4C40061CD1F /* generate_resources_tool */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = generate_resources_tool;
+			remoteRef = 71ABB24E2B81D4C40061CD1F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		711868002B8305DF00DB3162 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7118680B2B8305E000DB3162 /* Assets.xcassets in Resources */,
+				7118680E2B8305E000DB3162 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7123C4282B82BA0F00AD2BC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7123C4342B82BA1000AD2BC6 /* Preview Assets.xcassets in Resources */,
+				7123C4312B82BA1000AD2BC6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7123C43D2B82BAC600AD2BC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		715F88612B81AAA100155411 /* Sources */ = {
+		711867FE2B8305DF00DB3162 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				715F88692B81AAA100155411 /* main.cpp in Sources */,
+				711868172B83061200DB3162 /* KV2VirtualCamDeviceSource.mm in Sources */,
+				711868182B83061200DB3162 /* KV2VirtualCamProviderSource.mm in Sources */,
+				711868192B83061200DB3162 /* KV2VirtualCamStreamSource.mm in Sources */,
+				7118681A2B83061200DB3162 /* KV2VirtualCamLibKinect.mm in Sources */,
+				7118681B2B83061200DB3162 /* main.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7123C4262B82BA0F00AD2BC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7123C43A2B82BA5700AD2BC6 /* KinectV2SystemExtensionRequest.swift in Sources */,
+				7123C42F2B82BA0F00AD2BC6 /* ContentView.swift in Sources */,
+				7123C42D2B82BA0F00AD2BC6 /* KinectV2CamApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7123C43B2B82BAC600AD2BC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7123C45D2B82BB2F00AD2BC6 /* KV2VirtualCamStreamSource.mm in Sources */,
+				7123C45C2B82BB2F00AD2BC6 /* KV2VirtualCamDeviceSource.mm in Sources */,
+				7123C4512B82BAF300AD2BC6 /* main.mm in Sources */,
+				711867E02B82E96300DB3162 /* KV2VirtualCamLibKinect.mm in Sources */,
+				7123C45B2B82BB2F00AD2BC6 /* KV2VirtualCamProviderSource.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		711868162B83060700DB3162 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = freenect2;
+			targetProxy = 711868152B83060700DB3162 /* PBXContainerItemProxy */;
+		};
+		7123C4492B82BAC600AD2BC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7123C43E2B82BAC600AD2BC6 /* KV2VirtualCam */;
+			targetProxy = 7123C4482B82BAC600AD2BC6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7118680C2B8305E000DB3162 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7118680D2B8305E000DB3162 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		711868132B8305E000DB3162 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KV2VirtualCamTestApp/KV2VirtualCamTestApp.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/libfreenect2/",
+					"$(SRCROOT)/libfreenect2/include/**",
+					"$(SRCROOT)/libfreenect2/src/tinythread",
+					"$(SRCROOT)/libfreenect2/libfreenect2",
+				);
+				INFOPLIST_FILE = KV2VirtualCamTestApp/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.andersonramos.KV2VirtualCamTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		711868142B8305E000DB3162 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KV2VirtualCamTestApp/KV2VirtualCamTestApp.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/libfreenect2/",
+					"$(SRCROOT)/libfreenect2/include/**",
+					"$(SRCROOT)/libfreenect2/src/tinythread",
+					"$(SRCROOT)/libfreenect2/libfreenect2",
+				);
+				INFOPLIST_FILE = KV2VirtualCamTestApp/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.andersonramos.KV2VirtualCamTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		7123C4372B82BA1000AD2BC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KinectV2Cam/KinectV2Cam.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"KinectV2Cam/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "KinectV2 Camera";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.andersonramos.KinectV2Cam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7123C4382B82BA1000AD2BC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KinectV2Cam/KinectV2Cam.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"KinectV2Cam/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "KinectV2 Camera";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.andersonramos.KinectV2Cam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		7123C44C2B82BAC600AD2BC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = KV2VirtualCam/KV2VirtualCam.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/libfreenect2/",
+					"$(SRCROOT)/libfreenect2/include/**",
+					"$(SRCROOT)/libfreenect2/src/tinythread",
+					"$(SRCROOT)/libfreenect2/libfreenect2",
+				);
+				INFOPLIST_FILE = KV2VirtualCam/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = KV2VirtualCam;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.andersonramos.KinectV2Cam.KV2VirtualCam;
+				PRODUCT_NAME = "$(inherited)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		7123C44D2B82BAC600AD2BC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = KV2VirtualCam/KV2VirtualCam.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/libfreenect2/",
+					"$(SRCROOT)/libfreenect2/include/**",
+					"$(SRCROOT)/libfreenect2/src/tinythread",
+					"$(SRCROOT)/libfreenect2/libfreenect2",
+				);
+				INFOPLIST_FILE = KV2VirtualCam/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = KV2VirtualCam;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.andersonramos.KinectV2Cam.KV2VirtualCam;
+				PRODUCT_NAME = "$(inherited)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
 		715F886A2B81AAA100155411 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -241,43 +800,41 @@
 			};
 			name = Release;
 		};
-		715F886D2B81AAA100155411 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EUPS925RGY;
-				ENABLE_HARDENED_RUNTIME = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		715F886E2B81AAA100155411 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EUPS925RGY;
-				ENABLE_HARDENED_RUNTIME = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		711868122B8305E000DB3162 /* Build configuration list for PBXNativeTarget "KV2VirtualCamTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				711868132B8305E000DB3162 /* Debug */,
+				711868142B8305E000DB3162 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7123C4362B82BA1000AD2BC6 /* Build configuration list for PBXNativeTarget "KinectV2Cam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7123C4372B82BA1000AD2BC6 /* Debug */,
+				7123C4382B82BA1000AD2BC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7123C44B2B82BAC600AD2BC6 /* Build configuration list for PBXNativeTarget "KV2VirtualCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7123C44C2B82BAC600AD2BC6 /* Debug */,
+				7123C44D2B82BAC600AD2BC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		715F88602B81AAA100155411 /* Build configuration list for PBXProject "KinectV2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				715F886A2B81AAA100155411 /* Debug */,
 				715F886B2B81AAA100155411 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		715F886C2B81AAA100155411 /* Build configuration list for PBXNativeTarget "KinectV2" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				715F886D2B81AAA100155411 /* Debug */,
-				715F886E2B81AAA100155411 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
