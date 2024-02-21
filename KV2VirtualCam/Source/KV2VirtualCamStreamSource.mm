@@ -28,10 +28,12 @@
 
 - (void)setActiveFormatIndex:(NSUInteger)activeFormatIndex
 {
-    if (activeFormatIndex >= 1) 
+#if DEBUG
+    if (activeFormatIndex >= 1)
     {
         os_log(KV2VirtualCamLog, "Invalid index");
     }
+#endif
 }
 
 - (NSSet<CMIOExtensionProperty> *)availableProperties
@@ -46,7 +48,7 @@
         streamProperties.activeFormatIndex = @(self.activeFormatIndex);
     }
     if ([properties containsObject:CMIOExtensionPropertyStreamFrameDuration]) {
-        CMTime frameDuration = CMTimeMake(1, kFrameRate);
+        CMTime frameDuration = CMTimeMake(1, kFramesPerSecond);
         NSDictionary *frameDurationDictionary = CFBridgingRelease(CMTimeCopyAsDictionary(frameDuration, NULL));
         streamProperties.frameDuration = frameDurationDictionary;
     }

@@ -1,3 +1,3 @@
 #pragma once
 
-#define kFrameRate 60
+#define kFramesPerSecond 60

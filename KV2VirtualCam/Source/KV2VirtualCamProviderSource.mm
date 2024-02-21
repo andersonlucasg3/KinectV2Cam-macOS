@@ -24,7 +24,9 @@
  
         _libKinect = [[KV2VirtualCamLibKinect alloc] init];
         
+#if DEBUG
         os_log(KV2VirtualCamLog, "Create reference to libkinect: %p", _libKinect);
+#endif
         
         _devicesSources = [NSMutableDictionary new];
         
@@ -44,7 +46,9 @@
     
     const int kinectCount = [_libKinect getDeviceCount];
     
+#if DEBUG
     os_log_debug(KV2VirtualCamLog, "found %d devices", kinectCount);
+#endif
     
     for (int index = 0; index < kinectCount; ++index)
     {
@@ -63,9 +67,11 @@
                 [newDevicesSources setObject:deviceSource forKey:deviceSN];
             }
             
+#if DEBUG
             os_log(KV2VirtualCamLog, "Adding Kinect of name: %s, error: %s",
                    [deviceName cStringUsingEncoding:NSUTF8StringEncoding],
                    [[error debugDescription] cStringUsingEncoding:NSUTF8StringEncoding]);
+#endif
         }
         
         [allDevicesSN addObject:deviceSN];
@@ -84,9 +90,11 @@
             [newDevicesSources removeObjectForKey:deviceName];
         }
         
+#if DEBUG
         os_log(KV2VirtualCamLog, "Removing Kinect of name: %s, error: %s",
                [deviceSource.device.localizedName cStringUsingEncoding:NSUTF8StringEncoding],
                [[error debugDescription] cStringUsingEncoding:NSUTF8StringEncoding]);
+#endif
     }
     
     _devicesSources = newDevicesSources;
@@ -96,6 +104,8 @@
 
 - (BOOL)connectClient:(CMIOExtensionClient *)client error:(NSError * _Nullable *)outError
 {
+#if DEBUG
+    
     NSString* clientID = [[client clientID] UUIDString];
     NSString* signingID = [client signingID];
     pid_t pid = [client pid];
@@ -106,16 +116,22 @@
            [signingID  cStringUsingEncoding:NSUTF8StringEncoding],
            pid);
     
+#endif
+    
     return YES;
 }
 
 - (void)disconnectClient:(CMIOExtensionClient *)client
 {
+#if DEBUG
+    
     NSString* clientID = [[client clientID] UUIDString];
     NSString* signingID = [client signingID];
     pid_t pid = [client pid];
     os_log(KV2VirtualCamLog, "client %p disconnect, clientID: %@, signingID: %@, pid: %d",
           client, clientID, signingID, pid);
+    
+#endif
 }
 
 - (NSSet<CMIOExtensionProperty> *)availableProperties

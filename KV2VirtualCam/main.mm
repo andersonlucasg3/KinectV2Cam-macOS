@@ -5,7 +5,9 @@
 
 int main(int argc, char *argv[])
 {
+#if DEBUG
     os_log(KV2VirtualCamLog, "Starting KinectV2 Virtual Camera Extension");
+#endif
     
     @autoreleasepool 
     {

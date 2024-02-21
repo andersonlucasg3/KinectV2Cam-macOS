@@ -64,7 +64,9 @@ using namespace libfreenect2;
     
     if (dev == nullptr) 
     {
+#if DEBUG
         os_log(KV2VirtualCamLog, "Failed to open kinect device with SN: %s", [serialNumber cStringUsingEncoding:NSUTF8StringEncoding]);
+#endif
         
         return nil;
     }
@@ -81,7 +83,9 @@ using namespace libfreenect2;
 {
     BOOL result = device.device->startStreams(true, false);
     
+#if DEBUG
     os_log(KV2VirtualCamLog, "start streaming device success: %s", result ? "YES" : "NO");
+#endif
     
     return result;
 }
@@ -93,13 +97,14 @@ using namespace libfreenect2;
 
 - (void) waitForFrame:(KV2VirtualCamKinectDevice *)device processFrame:(void (^)(size_t, size_t, uint8, unsigned char *))block
 {
-    device.listener->waitForNewFrame(_frames, 1000); // 1 sec
-    
-    Frame *rgb = _frames[Frame::Color];
-    
-    block(rgb->width, rgb->height, rgb->bytes_per_pixel, rgb->data);
-    
-    device.listener->release(_frames);
+    if (device.listener->waitForNewFrame(_frames, 1000)) // 1 sec
+    {
+        Frame *rgb = _frames[Frame::Color];
+        
+        block(rgb->width, rgb->height, rgb->bytes_per_pixel, rgb->data);
+        
+        device.listener->release(_frames);
+    }
 }
 
 @end
